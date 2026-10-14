@@ -1278,40 +1278,46 @@ function renderFaculty() {
   `).join('');
 }
 
-// Google Calendar URL Generator & Confetti
+// Creative Multi-Stage Solar Nova Celebration Engine
 function setupCalendarAndConfetti() {
-  const calBtn = document.getElementById('add-to-calendar-btn');
   const celebrateBtn = document.getElementById('celebrate-btn');
 
-  // Generate Google Calendar Link
-  if (calBtn) {
-    const title = encodeURIComponent(`${EVENT_CONFIG.brand.fullName} — ${EVENT_CONFIG.brand.department} Freshers' Celebration`);
-    const details = encodeURIComponent(`${EVENT_CONFIG.brand.tagline}\n\nJoin us for ${EVENT_CONFIG.brand.fullName} at MGIT with the OGs of ${EVENT_CONFIG.brand.department}.\n\nSchedule starts at ${EVENT_CONFIG.datetime.time} at ${EVENT_CONFIG.datetime.venue}.\n\nInstagram: ${EVENT_CONFIG.links.instagramHandle}`);
-    const location = encodeURIComponent(`${EVENT_CONFIG.datetime.venue}, ${EVENT_CONFIG.brand.institution}`);
-    
-    // Dates in UTC format YYYYMMDDTHHmmssZ
-    // 15 Oct 2026 09:30 AM IST = 04:00 AM UTC
-    // 15 Oct 2026 01:00 PM IST = 07:30 AM UTC
-    const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=20261015T040000Z/20261015T073000Z&details=${details}&location=${location}`;
-    
-    calBtn.setAttribute('href', calendarUrl);
-    calBtn.setAttribute('target', '_blank');
-    calBtn.setAttribute('rel', 'noopener noreferrer');
-  }
-
-  // Confetti Physics on Celebrate Button
   if (celebrateBtn) {
+    const btnText = document.getElementById('celebrate-btn-text');
+    let isFiring = false;
+
     celebrateBtn.addEventListener('click', (e) => {
       const rect = celebrateBtn.getBoundingClientRect();
       const originX = (rect.left + rect.width / 2) / window.innerWidth;
       const originY = (rect.top + rect.height / 2) / window.innerHeight;
 
-      // Burst of golden confetti
-      fireConfetti({ particleCount: 110, origin: { x: originX, y: originY } });
+      // Stage 1: Core Solar Ignition
+      fireConfetti({ particleCount: 120, origin: { x: originX, y: originY } });
+
+      // Stage 2: Dual Solar Wings (at +180ms)
       setTimeout(() => {
-        fireConfetti({ particleCount: 70, origin: { x: originX - 0.15, y: originY } });
-        fireConfetti({ particleCount: 70, origin: { x: originX + 0.15, y: originY } });
-      }, 250);
+        fireConfetti({ particleCount: 85, origin: { x: Math.max(0.1, originX - 0.2), y: originY } });
+        fireConfetti({ particleCount: 85, origin: { x: Math.min(0.9, originX + 0.2), y: originY } });
+      }, 180);
+
+      // Stage 3: Cosmic Canopy Cascade (at +360ms)
+      setTimeout(() => {
+        fireConfetti({ particleCount: 140, origin: { x: 0.5, y: 0.2 } });
+      }, 360);
+
+      // Button State Transformation
+      if (btnText && !isFiring) {
+        isFiring = true;
+        const originalText = btnText.textContent;
+        btnText.textContent = 'SOLAR NOVA IGNITED! 🌟';
+        celebrateBtn.classList.add('scale-105');
+
+        setTimeout(() => {
+          btnText.textContent = originalText;
+          celebrateBtn.classList.remove('scale-105');
+          isFiring = false;
+        }, 3200);
+      }
     });
   }
 }

@@ -218,42 +218,59 @@
   <header id="main-navbar" class="navbar-fixed">
     <div class="nav-container">
       <!-- Logo Branding -->
-      <a href="#hero" class="flex items-center gap-2.5 text-white transition-opacity hover:opacity-90">
+      <a href="#hero" class="flex items-center gap-3 text-white transition-all group">
         <div
-          class="w-7 h-7 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center shadow-[0_0_12px_rgba(245,158,11,0.6)]">
-          <span class="w-2 h-2 rounded-full bg-amber-300 animate-pulse"></span>
+          class="w-8 h-8 rounded-full bg-gradient-to-tr from-amber-600 via-yellow-400 to-amber-500 p-0.5 shadow-[0_0_15px_rgba(245,158,11,0.6)] group-hover:scale-110 transition-transform">
+          <div class="w-full h-full rounded-full bg-[#140b07] flex items-center justify-center">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping"></span>
+          </div>
         </div>
-        <span class="font-serif text-lg sm:text-xl font-bold tracking-widest metallic-text">ANVAYA</span>
-        <span
-          class="text-xs font-semibold px-1.5 py-0.5 rounded bg-amber-500/20 border border-amber-500/35 text-amber-300 tracking-wider uppercase">2K26</span>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1.5">
+            <span class="font-serif text-lg sm:text-xl font-black tracking-widest text-white group-hover:text-amber-300 transition-colors">ANVAYA</span>
+            <span class="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-amber-500/20 border border-amber-400/40 text-amber-300 tracking-wider">2K26</span>
+          </div>
+          <span class="text-[9px] font-mono tracking-[0.25em] text-amber-200/60 uppercase">CSE 2 • MGIT</span>
+        </div>
       </a>
 
       <!-- Desktop Navlinks -->
       <nav class="nav-pill hidden md:flex">
-        <a href="#schedule" class="nav-link">Schedule</a>
-        <a href="#faculty" class="nav-link">Faculty</a>
-        <a href="#gallery" class="nav-link">Memories</a>
+        <a href="#schedule" class="nav-link">
+          <span class="text-amber-400 text-[10px]">01</span>
+          <span>Itinerary</span>
+        </a>
+        <a href="#faculty" class="nav-link">
+          <span class="text-amber-400 text-[10px]">02</span>
+          <span>Faculty</span>
+        </a>
+        <a href="#gallery" class="nav-link">
+          <span class="text-amber-400 text-[10px]">03</span>
+          <span>Vault</span>
+        </a>
+        <a href="#watch-reveal" class="nav-link">
+          <span class="text-amber-400 text-[10px]">04</span>
+          <span>Horologe</span>
+        </a>
 
         <!-- Instagram Link -->
         <a href="https://instagram.com/anvaya_mgit" target="_blank" rel="noopener noreferrer"
-          class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0c0704] bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 hover:from-white hover:to-amber-400 px-3.5 py-1.5 rounded-full shadow-[0_0_15px_rgba(245,158,11,0.5)] transition-all ml-1">
+          class="nav-instagram-btn ml-1">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
             <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
             <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
           </svg>
-          <span>Instagram</span>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-            <polyline points="15 3 21 3 21 9" />
-            <line x1="10" x2="21" y1="14" y2="3" />
+          <span>@anvaya_mgit</span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M7 17L17 7M17 7H7M17 7V17"/>
           </svg>
         </a>
       </nav>
 
       <!-- Mobile Hamburger Button -->
       <button id="mobile-menu-btn"
-        class="mobile-menu-btn md:hidden p-2 rounded-xl bg-amber-500/10 border border-amber-500/25 text-amber-200 hover:bg-amber-500/20"
+        class="mobile-menu-btn md:hidden p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-200 hover:bg-amber-500/20 cursor-pointer"
         aria-label="Toggle navigation menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="4" x2="20" y1="12" y2="12" />
@@ -265,21 +282,40 @@
 
     <!-- Mobile Drawer -->
     <div id="mobile-drawer"
-      class="hidden md:hidden bg-[#0c0704]/95 border-b border-amber-500/20 backdrop-blur-xl px-4 pt-3 pb-6 mt-2">
+      class="hidden md:hidden bg-[#0c0704]/95 border-b border-amber-500/25 backdrop-blur-xl px-5 pt-4 pb-6 mt-1 shadow-2xl">
       <nav class="flex flex-col gap-2">
         <a href="#schedule"
-          class="px-4 py-3 text-base font-medium text-amber-100 hover:text-white hover:bg-amber-500/10 rounded-xl">Schedule</a>
+          class="px-4 py-3 text-sm font-mono font-semibold text-amber-100 hover:text-white hover:bg-amber-500/15 rounded-xl flex items-center justify-between">
+          <span>01 • Curated Itinerary</span>
+          <span class="text-amber-400">→</span>
+        </a>
         <a href="#faculty"
-          class="px-4 py-3 text-base font-medium text-amber-100 hover:text-white hover:bg-amber-500/10 rounded-xl">Faculty</a>
+          class="px-4 py-3 text-sm font-mono font-semibold text-amber-100 hover:text-white hover:bg-amber-500/15 rounded-xl flex items-center justify-between">
+          <span>02 • Faculty Leadership</span>
+          <span class="text-amber-400">→</span>
+        </a>
         <a href="#gallery"
-          class="px-4 py-3 text-base font-medium text-amber-100 hover:text-white hover:bg-amber-500/10 rounded-xl">Memories</a>
+          class="px-4 py-3 text-sm font-mono font-semibold text-amber-100 hover:text-white hover:bg-amber-500/15 rounded-xl flex items-center justify-between">
+          <span>03 • Living Memory Vault</span>
+          <span class="text-amber-400">→</span>
+        </a>
+        <a href="#watch-reveal"
+          class="px-4 py-3 text-sm font-mono font-semibold text-amber-100 hover:text-white hover:bg-amber-500/15 rounded-xl flex items-center justify-between">
+          <span>04 • Celestial Horologe</span>
+          <span class="text-amber-400">→</span>
+        </a>
         <a href="https://instagram.com/anvaya_mgit" target="_blank" rel="noopener noreferrer"
-          class="flex items-center justify-between px-4 py-3 mt-2 text-base font-bold text-[#0c0704] bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 rounded-xl shadow-lg">
-          <span>Connect on Instagram (@anvaya_mgit)</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-            <polyline points="15 3 21 3 21 9" />
-            <line x1="10" x2="21" y1="14" y2="3" />
+          class="flex items-center justify-between px-5 py-3.5 mt-3 text-sm font-bold text-[#0c0704] bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 rounded-xl shadow-[0_0_20px_rgba(245,158,11,0.4)]">
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+            <span>Instagram Broadcast (@anvaya_mgit)</span>
+          </div>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M7 17L17 7M17 7H7M17 7V17"/>
           </svg>
         </a>
       </nav>
@@ -491,105 +527,156 @@
 
 
   <!-- =========================================================================
-       6. COUNTDOWN & ROYAL CHRONOGRAPH SECTION
+       6. THE CELESTIAL HOROLOGE & TIME-SYNAPSE COUNTDOWN
        ========================================================================= -->
   <section id="watch-reveal"
-    class="relative min-h-[90vh] py-20 px-4 sm:px-6 lg:px-8 z-10 flex flex-col items-center justify-center overflow-hidden">
-    <div class="ambient-orb w-[600px] h-[600px] bg-amber-500/10"></div>
+    class="relative min-h-[95vh] py-24 px-4 sm:px-6 lg:px-8 z-10 flex flex-col items-center justify-center overflow-hidden">
+    <div class="ambient-orb w-[700px] h-[700px] bg-amber-500/12 pointer-events-none"></div>
 
-    <div class="max-w-5xl mx-auto w-full flex flex-col items-center text-center">
-      <div class="flex items-center justify-center gap-3 mb-3">
-        <span class="text-xs sm:text-sm font-bold tracking-[0.35em] uppercase text-amber-300">The Countdown to
-          Inauguration</span>
+    <div class="max-w-6xl mx-auto w-full flex flex-col items-center text-center relative z-10">
+      
+      <!-- Section Eyebrow -->
+      <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-amber-500/10 border border-amber-400/35 backdrop-blur-md shadow-[0_0_20px_rgba(245,158,11,0.25)] mb-6">
+        <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+        <span class="text-xs sm:text-sm font-bold tracking-[0.35em] uppercase text-amber-200">
+          SYNCHRONIZING TIME WITH DESTINY • 15 OCTOBER 2026
+        </span>
       </div>
 
-      <h2 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-[#FFFDF7] tracking-tight">
-        Countdown to <span class="metallic-text">15 October 2026</span>
+      <h2 class="font-serif text-4xl sm:text-6xl md:text-7xl font-extrabold text-[#FFFDF7] tracking-tight uppercase">
+        The Celestial <span class="metallic-text">Horologe</span>
       </h2>
-      <p class="mt-3 text-base sm:text-xl text-amber-100/80 max-w-2xl font-light">
-        Every second brings us closer to the celebration. At 9:30 AM sharp, the doors of E-201 open for ANVAYA 2K26.
+      
+      <p class="mt-4 text-base sm:text-xl text-amber-100/85 max-w-3xl font-light leading-relaxed">
+        Time bows to memory. As the celestial hands sweep toward <strong class="text-amber-300 font-medium">9:30 AM</strong> on Thursday, 15 October 2026, the threshold of E-Block Auditorium opens to seal the brotherhood of CSE 2. Every tick brings us closer to history.
       </p>
 
-      <!-- 4 Countdown Cards -->
-      <div class="w-full max-w-3xl my-10">
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
-          <div class="glass-panel p-5 sm:p-7 text-center border-amber-500/30">
-            <span id="count-days"
-              class="font-serif text-4xl sm:text-5xl md:text-6xl font-black metallic-text tracking-tight block">00</span>
-            <span
-              class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-amber-300 mt-2 block">Days</span>
-          </div>
-          <div class="glass-panel p-5 sm:p-7 text-center border-amber-500/30">
-            <span id="count-hours"
-              class="font-serif text-4xl sm:text-5xl md:text-6xl font-black metallic-text tracking-tight block">00</span>
-            <span
-              class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-amber-300 mt-2 block">Hours</span>
-          </div>
-          <div class="glass-panel p-5 sm:p-7 text-center border-amber-500/30">
-            <span id="count-minutes"
-              class="font-serif text-4xl sm:text-5xl md:text-6xl font-black metallic-text tracking-tight block">00</span>
-            <span
-              class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-amber-300 mt-2 block">Minutes</span>
-          </div>
-          <div class="glass-panel p-5 sm:p-7 text-center border-amber-500/30">
-            <span id="count-seconds"
-              class="font-serif text-4xl sm:text-5xl md:text-6xl font-black text-amber-300 drop-shadow-[0_0_12px_#f59e0b] tracking-tight block">00</span>
-            <span
-              class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-amber-300 mt-2 block">Seconds</span>
-          </div>
-        </div>
-      </div>
+      <!-- Central Timepiece: 3D Tourbillon Chronometer -->
+      <div class="horologe-stage my-12">
+        <div id="watch-housing" class="horologe-housing cursor-grab active:cursor-grabbing" title="3D Gyro Tourbillon • Interactive Tilt">
+          <div class="horologe-dial">
+            <!-- Astrolabe Celestial Gear Rings -->
+            <div class="horologe-gear"></div>
+            <div class="horologe-gear-inner"></div>
 
-      <!-- 3D Gyro Royal Chronograph & Real-Time Clock Active Indicator -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 w-full max-w-xl">
-        <div id="watch-housing" class="watch-housing">
-          <div class="watch-dial">
-            <span
-              class="absolute top-[26%] font-serif text-[7.5px] font-bold tracking-widest text-amber-200">ANVAYA</span>
+            <!-- Hour markers -->
+            <span class="absolute top-3 font-serif text-[11px] font-bold text-amber-200/90 tracking-widest">XII</span>
+            <span class="absolute right-3.5 font-serif text-[11px] font-bold text-amber-200/90 tracking-widest">III</span>
+            <span class="absolute bottom-3 font-serif text-[11px] font-bold text-amber-200/90 tracking-widest">VI</span>
+            <span class="absolute left-3.5 font-serif text-[11px] font-bold text-amber-200/90 tracking-widest">IX</span>
+
+            <!-- Brand Medallion -->
+            <div class="absolute top-[28%] flex flex-col items-center">
+              <span class="font-serif text-[9px] font-black tracking-[0.25em] text-[#FEF08A] uppercase">ANVAYA</span>
+              <span class="text-[6.5px] font-mono tracking-widest text-amber-400/80 uppercase">CHRONOMETER</span>
+            </div>
+
             <div class="watch-center-pin"></div>
             <div id="watch-hour-hand" class="watch-hand-hour"></div>
             <div id="watch-min-hand" class="watch-hand-minute"></div>
             <div id="watch-sec-hand" class="watch-hand-second"></div>
-          </div>
-        </div>
 
-        <div class="text-center sm:text-left">
-          <div
-            class="flex items-center justify-center sm:justify-start gap-1.5 text-xs font-semibold text-amber-300 uppercase tracking-wider mb-1">
-            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-            <span>Real-Time Local Clock Active</span>
-          </div>
-          <p class="text-sm text-amber-100/80 font-light">
-            Official Inauguration programmed for <strong class="text-white">Thursday, 15 Oct 2026</strong> at
-            <strong>09:30 AM IST</strong>.
-          </p>
-        </div>
-      </div>
-
-      <!-- Upcoming Event Preview -->
-      <div class="w-full max-w-xl">
-        <div class="glass-panel p-6 sm:p-8 border-amber-500/30 text-left">
-          <div class="flex items-center justify-between gap-4">
-            <div class="flex items-center gap-3">
-              <div
-                class="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-300 shadow-[0_0_15px_rgba(245,158,11,0.4)]">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path
-                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-              </div>
-              <div>
-                <span class="text-xs font-mono uppercase tracking-widest text-amber-300">09:30 AM IST • E-201</span>
-                <h4 class="font-serif text-lg font-bold text-white">Welcoming Guests & Inauguration</h4>
-              </div>
+            <!-- Bottom Complication Subdial -->
+            <div class="absolute bottom-[20%] flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#140b07]/80 border border-amber-500/30 text-[7px] font-mono text-amber-300">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>LIVE SYNC</span>
             </div>
-            <a href="#schedule"
-              class="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-[#0c0704] bg-gradient-to-r from-amber-400 to-yellow-400 hover:scale-105 transition-all shrink-0">
-              Details
-            </a>
           </div>
         </div>
+
+        <div class="mt-4 flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-amber-500/25 text-xs text-amber-200/80 font-mono tracking-wider">
+          <svg width="14" height="14" class="text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 14 14"/>
+          </svg>
+          <span>E-201 AUDITORIUM • HIGH-PRECISION REAL-TIME ENGINE</span>
+        </div>
       </div>
+
+      <!-- 4 Chrono-Vault Pillars -->
+      <div class="w-full max-w-4xl my-4">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+          
+          <div class="chrono-pillar text-center group">
+            <span class="text-[10px] font-mono tracking-[0.25em] uppercase text-amber-400/80 block mb-1">
+              REVOLUTIONS
+            </span>
+            <span id="count-days"
+              class="font-serif text-4xl sm:text-6xl md:text-7xl font-black metallic-text tracking-tight block group-hover:scale-105 transition-transform">
+              00
+            </span>
+            <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-amber-200 mt-2 block">
+              Days
+            </span>
+          </div>
+
+          <div class="chrono-pillar text-center group">
+            <span class="text-[10px] font-mono tracking-[0.25em] uppercase text-amber-400/80 block mb-1">
+              EQUINOX
+            </span>
+            <span id="count-hours"
+              class="font-serif text-4xl sm:text-6xl md:text-7xl font-black metallic-text tracking-tight block group-hover:scale-105 transition-transform">
+              00
+            </span>
+            <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-amber-200 mt-2 block">
+              Hours
+            </span>
+          </div>
+
+          <div class="chrono-pillar text-center group">
+            <span class="text-[10px] font-mono tracking-[0.25em] uppercase text-amber-400/80 block mb-1">
+              CHRONO UNITS
+            </span>
+            <span id="count-minutes"
+              class="font-serif text-4xl sm:text-6xl md:text-7xl font-black metallic-text tracking-tight block group-hover:scale-105 transition-transform">
+              00
+            </span>
+            <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-amber-200 mt-2 block">
+              Minutes
+            </span>
+          </div>
+
+          <div class="chrono-pillar text-center group">
+            <span class="text-[10px] font-mono tracking-[0.25em] uppercase text-amber-400/80 block mb-1">
+              OSCILLATIONS
+            </span>
+            <span id="count-seconds"
+              class="font-serif text-4xl sm:text-6xl md:text-7xl font-black text-amber-300 drop-shadow-[0_0_18px_#f59e0b] tracking-tight block group-hover:scale-105 transition-transform">
+              00
+            </span>
+            <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-amber-200 mt-2 block">
+              Seconds
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Live Launch Banner -->
+      <div class="w-full max-w-2xl mt-8">
+        <div class="glass-panel p-5 sm:p-6 rounded-2xl border-amber-500/35 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3.5 text-left">
+            <div class="w-11 h-11 rounded-xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-300 shadow-[0_0_15px_rgba(245,158,11,0.35)] shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-[11px] font-mono uppercase tracking-widest text-amber-300 font-bold">
+                COMMENCEMENT • 09:30 AM IST
+              </span>
+              <h4 class="font-serif text-base sm:text-lg font-bold text-white">
+                Inaugural Lamp Lighting &amp; Floral Blessing
+              </h4>
+            </div>
+          </div>
+          <a href="#schedule"
+            class="px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-wider text-[#0c0704] bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 hover:scale-105 transition-all shadow-[0_0_15px_rgba(245,158,11,0.4)] shrink-0">
+            View Itinerary →
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -742,103 +829,120 @@
 
 
   <!-- =========================================================================
-       10. FOOTER & CALENDAR CELEBRATION RSVP
+       10. FOOTER & CELESTIAL CONVERGENCE RSVP
        ========================================================================= -->
-  <footer id="reminder" class="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8 z-10 overflow-hidden">
+  <footer id="reminder" class="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8 z-10 overflow-hidden">
     <div
-      class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-gradient-to-t from-amber-500/20 via-amber-600/5 to-transparent rounded-full blur-[150px] pointer-events-none">
+      class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[950px] h-[550px] bg-gradient-to-t from-amber-500/25 via-amber-600/8 to-transparent rounded-full blur-[160px] pointer-events-none">
     </div>
 
     <div class="max-w-5xl mx-auto w-full relative z-10">
-      <div class="glass-panel p-8 sm:p-14 text-center border-amber-500/35 shadow-lg overflow-hidden relative">
-        <div class="flex items-center justify-center gap-3 mb-4">
-          <span class="text-xs sm:text-sm font-bold tracking-[0.4em] uppercase text-amber-300">The Final Call</span>
+      
+      <!-- Main Glass Embarkation Console -->
+      <div class="glass-panel p-8 sm:p-14 text-center border-amber-500/35 shadow-[0_20px_60px_rgba(0,0,0,0.8)] overflow-hidden relative rounded-3xl">
+        
+        <div class="inline-flex items-center gap-2.5 px-4 sm:px-5 py-1.5 rounded-full bg-amber-500/10 border border-amber-400/40 text-amber-200 text-xs sm:text-sm font-mono font-bold tracking-[0.35em] uppercase mb-5 shadow-[0_0_15px_rgba(245,158,11,0.25)]">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+          <span>THE DEFINING DAWN • CLASS OF CSE 2</span>
         </div>
 
-        <h2 class="font-serif text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight uppercase">
-          See you at <span class="metallic-text">ANVAYA!</span>
+        <h2 class="font-serif text-4xl sm:text-6xl md:text-7xl font-black text-white tracking-tight uppercase leading-tight">
+          Cross The Golden <span class="metallic-text">Threshold</span>
         </h2>
-        <p class="mt-4 text-base sm:text-xl text-amber-100/80 max-w-2xl mx-auto font-light">
-          Mark your calendar, invite your batchmates, and prepare for an unforgettable celebration.
+        
+        <p class="mt-5 text-base sm:text-xl text-amber-100/85 max-w-2xl mx-auto font-light leading-relaxed">
+          Four years of ambition, electric laughter, late-night camaraderie, and code that shapes the future begin the moment you enter. You are not just attending a celebration; you are claiming your place in the lineage of MGIT CSE 2.
         </p>
 
-        <!-- RSVP & Calendar CTAs -->
-        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a id="add-to-calendar-btn" href="#" target="_blank" rel="noopener noreferrer"
-            class="flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-black uppercase tracking-wider text-[#0c0704] bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 hover:scale-105 transition-all shadow-[0_0_25px_rgba(245,158,11,0.5)] cursor-pointer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-              <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
-              <line x1="16" x2="16" y1="2" y2="6" />
-              <line x1="8" x2="8" y1="2" y2="6" />
-              <line x1="3" x2="21" y1="10" y2="10" />
-              <line x1="12" x2="12" y1="14" y2="18" />
-              <line x1="10" x2="14" y1="16" y2="16" />
-            </svg>
-            <span>Add to Google Calendar</span>
-          </a>
-
+        <!-- Celebration CTA -->
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4 sm:gap-5">
+          <!-- Creative Solar Nova Animation Trigger -->
           <button id="celebrate-btn"
-            class="flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-bold uppercase tracking-wider text-amber-200 bg-amber-500/15 border border-amber-500/35 hover:bg-amber-500/25 hover:border-amber-400 hover:scale-105 transition-all shadow-[0_0_20px_rgba(245,158,11,0.2)] cursor-pointer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5.8 11.3 12.7 4.4a2 2 0 0 1 2.8 0l4.2 4.2a2 2 0 0 1 0 2.8l-6.9 6.9" />
-              <path d="m2 22 3-3" />
-              <path d="M9.5 14.5 4 20" />
+            class="btn-solar-nova flex items-center gap-2.5 text-xs sm:text-sm shadow-[0_0_25px_rgba(245,158,11,0.5)]">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="animate-spin-very-slow">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
             </svg>
-            <span>Celebrate ANVAYA ✨</span>
+            <span id="celebrate-btn-text">Ignite Solar Nova 🌟</span>
           </button>
+        </div>
+
+        <div class="mt-6 flex items-center justify-center gap-2 text-xs font-mono text-amber-200/60">
+          <span>Thursday, 15 October 2026</span>
+          <span>•</span>
+          <span>09:30 AM IST</span>
+          <span>•</span>
+          <span>Auditorium E-201</span>
         </div>
       </div>
 
-      <!-- Instagram Official Card -->
+      <!-- Instagram Official Embassy Card -->
       <div class="mt-12 flex flex-col items-center justify-center text-center">
         <a href="https://instagram.com/anvaya_mgit" target="_blank" rel="noopener noreferrer"
-          class="group inline-flex items-center gap-3.5 px-8 py-4 rounded-2xl bg-[#140b07]/80 border border-amber-500/30 hover:border-amber-400 transition-all shadow-glass hover:shadow-[0_0_30px_rgba(245,158,11,0.4)] hover:-translate-y-0.5">
-          <div
-            class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-500 to-yellow-400 p-0.5 flex items-center justify-center shadow-[0_0_15px_rgba(245,158,11,0.4)]">
-            <div class="w-full h-full bg-[#140b07] rounded-[10px] flex items-center justify-center text-amber-300">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-              </svg>
+          class="group w-full max-w-2xl flex flex-col sm:flex-row items-center justify-between gap-5 p-6 rounded-2xl bg-[#140b07]/85 border border-amber-500/30 hover:border-amber-400 transition-all shadow-[0_10px_35px_rgba(0,0,0,0.6)] hover:shadow-[0_0_35px_rgba(245,158,11,0.35)] hover:-translate-y-1">
+          
+          <div class="flex items-center gap-4 text-left">
+            <div
+              class="w-13 h-13 rounded-2xl bg-gradient-to-tr from-amber-500 to-yellow-400 p-0.5 flex items-center justify-center shadow-[0_0_18px_rgba(245,158,11,0.45)] shrink-0">
+              <div class="w-full h-full bg-[#140b07] rounded-[14px] flex items-center justify-center text-amber-300">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-[11px] uppercase tracking-widest text-amber-300/90 font-mono font-bold">
+                  LIVE BROADCAST EMBASSY
+                </span>
+              </div>
+              <h4 class="text-base sm:text-lg font-serif font-bold text-white group-hover:text-amber-300 transition-colors mt-0.5">
+                Follow Official Transmission: @anvaya_mgit
+              </h4>
+              <p class="text-xs text-amber-100/70 font-light mt-0.5">
+                Behind-the-scenes teasers, student reels &amp; live ceremony updates.
+              </p>
             </div>
           </div>
-          <div class="text-left">
-            <span class="text-xs uppercase tracking-widest text-amber-200/80 block font-mono">Official Instagram
-              Channel</span>
-            <span
-              class="text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition-colors flex items-center gap-1.5">
-              Connect with us on Instagram
-              <svg width="16" height="16" class="text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                <polyline points="15 3 21 3 21 9" />
-                <line x1="10" x2="21" y1="14" y2="3" />
-              </svg>
-            </span>
+
+          <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-mono font-bold uppercase tracking-wider group-hover:bg-amber-500 group-hover:text-[#0c0704] transition-all shrink-0">
+            <span>Join Broadcast</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M7 17L17 7M17 7H7M17 7V17"/>
+            </svg>
           </div>
         </a>
-        <span class="text-xs text-amber-200/60 mt-2 font-mono">@anvaya_mgit</span>
       </div>
 
-      <!-- Bottom Credits -->
+      <!-- Bottom Credits & Elevate Button -->
       <div
         class="mt-16 pt-8 border-t border-amber-500/20 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
         <div class="flex flex-col items-center sm:items-start">
           <span class="font-serif text-sm tracking-widest text-white uppercase font-bold">ANVAYA 2K26 • CSE 2</span>
-          <span class="text-xs text-amber-200/70 mt-0.5">Mahatma Gandhi Institute of Technology (MGIT)</span>
+          <span class="text-xs text-amber-200/70 mt-0.5">Mahatma Gandhi Institute of Technology (MGIT) • Class of 2026</span>
         </div>
 
-        <div
-          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-amber-500/30 bg-[#140b07]/50 backdrop-blur-sm shadow-[0_0_15px_rgba(245,158,11,0.15)]">
-          <svg width="14" height="14" class="text-amber-400 fill-amber-400/40" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-          </svg>
-          <span class="text-xs sm:text-sm font-medium tracking-wide text-amber-100">Made by CSE-2 with
-            fondness</span>
+        <div class="flex items-center gap-4">
+          <div
+            class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-amber-500/30 bg-[#140b07]/60 backdrop-blur-sm text-xs font-mono text-amber-200/80">
+            <span>Orchestrated with pride by Senior Committee</span>
+          </div>
+
+          <!-- Return to Zenith Button -->
+          <a href="#hero"
+            class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-400/35 flex items-center justify-center text-amber-300 hover:text-white hover:bg-amber-500/30 hover:scale-110 transition-all cursor-pointer"
+            title="Return to Top">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="18 15 12 9 6 15"/>
+            </svg>
+          </a>
         </div>
       </div>
+
     </div>
   </footer>
 
